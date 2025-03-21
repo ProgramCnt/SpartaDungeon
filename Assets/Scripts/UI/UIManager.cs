@@ -7,14 +7,11 @@ public class UIManager : MonoBehaviour
     static UIManager _instance;
     public static UIManager Instance { get { return _instance; } }
 
-    [SerializeField]
-    private UIStatus _status;
+    public UIStatus _status;
 
-    [SerializeField]
-    private UIMain _main;
+    public UIMain _main;
 
-    [SerializeField]
-    private UIInventory _inventory;
+    public UIInventory _inventory;
 
     private void Awake()
     {

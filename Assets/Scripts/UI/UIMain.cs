@@ -20,7 +20,7 @@ public class UIMain : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        backButton.onClick.AddListener(OnBackButtonClick);
     }
 
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class UIMain : MonoBehaviour
 
     public void SetPlayerInfo(Character character)
     {
-        playerInfoUI.SetCharacterName(character.name);
+        playerInfoUI.SetCharacterName("");
         playerInfoUI.SetLevelBar(character.experience, character.experienceAmount);
         playerInfoUI.SetLevelText(character.level);
         playerInfoUI.SetDescription(character.description);
