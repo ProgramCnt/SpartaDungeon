@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Character
 {
     public int curHealth;
     public int maxHealth;
@@ -18,6 +18,7 @@ public class Character : MonoBehaviour
     public Character()
     {
         curHealth = 100;
+        maxHealth = 100;
         attack = 35;
         defense = 40;
         criticalChance = 25f;
@@ -38,5 +39,15 @@ public class Character : MonoBehaviour
         this.description = description;
         this.experienceAmount = experienceAmount;
         this.gold = gold;
+    }
+
+    public virtual void OnDamage(int damage)
+    {
+        
+    }
+
+    public virtual void Heal(int healAmount)
+    {
+
     }
 }
