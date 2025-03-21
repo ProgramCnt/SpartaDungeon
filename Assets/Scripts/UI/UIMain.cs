@@ -14,6 +14,9 @@ public class UIMain : MonoBehaviour
     public Button inventoryButton;
     public Button backButton;
 
+    [SerializeField]
+    private PlayerInfoUI playerInfoUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +35,12 @@ public class UIMain : MonoBehaviour
 
     }
 
-    public void SetPlayerInfo()         //파라미터 설정 필요
+    public void SetPlayerInfo(Character character)
     {
-
+        playerInfoUI.SetCharacterName(character.name);
+        playerInfoUI.SetLevelBar(character.experience, character.experienceAmount);
+        playerInfoUI.SetLevelText(character.level);
+        playerInfoUI.SetDescription(character.description);
     }
 
     public void SetGoldText(int goldAmount)
@@ -45,31 +51,33 @@ public class UIMain : MonoBehaviour
     public void OnStatusButtonClick()
     {
         ShowBackButton();
-        //스텟창 띄우기
+        UIManager.Instance.ShowStatus();
     }
 
     public void OnInventoryButtonClick()
     {
         ShowBackButton();
-        //인벤토리창 띄우기
+        UIManager.Instance.ShowInventory();
     }
 
     public void OnBackButtonClick()
     {
         HideBackButton();
+        UIManager.Instance.HideStatus();
+        UIManager.Instance.HideInventory();
     }
 
     void ShowBackButton()
     {
-        statusButton.gameObject.SetActive(true);
-        inventoryButton.gameObject.SetActive(true);
-        backButton.gameObject.SetActive(false);
+        statusButton.gameObject.SetActive(false);
+        inventoryButton.gameObject.SetActive(false);
+        backButton.gameObject.SetActive(true);
     }
 
     void HideBackButton()
     {
-        statusButton.gameObject.SetActive(false);
-        inventoryButton.gameObject.SetActive(false);
-        backButton.gameObject.SetActive(true);
+        statusButton.gameObject.SetActive(true);
+        inventoryButton.gameObject.SetActive(true);
+        backButton.gameObject.SetActive(false);
     }
 }

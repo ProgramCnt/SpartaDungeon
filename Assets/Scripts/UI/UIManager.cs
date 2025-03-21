@@ -30,6 +30,27 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        
+        HideInventory();
+        HideStatus();
+    }
+
+    public void ShowInventory()
+    {
+        _inventory.gameObject.SetActive(true);
+    }
+
+    public void ShowStatus()
+    {
+        _status.gameObject.SetActive(true);
+    }
+
+    public void HideInventory()
+    {
+        _inventory.gameObject.SetActive(false);
+    }
+
+    public void HideStatus()
+    {
+        _status.gameObject.SetActive(false);
     }
 }
