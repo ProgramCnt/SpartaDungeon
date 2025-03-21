@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIMain : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject buttonArea;
-
     public TextMeshProUGUI goldText;
     public Button statusButton;
     public Button inventoryButton;
@@ -31,16 +26,12 @@ public class UIMain : MonoBehaviour
 
     public void Init()
     {
-        buttonArea.SetActive(true);
 
     }
 
     public void SetPlayerInfo(Character character)
     {
-        playerInfoUI.SetCharacterName("");
-        playerInfoUI.SetLevelBar(character.experience, character.experienceAmount);
-        playerInfoUI.SetLevelText(character.level);
-        playerInfoUI.SetDescription(character.description);
+
     }
 
     public void SetGoldText(int goldAmount)
