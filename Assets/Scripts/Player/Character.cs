@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class Character
 {
-    public int curHealth;
-    public int maxHealth;
-    public int attack;
-    public int defense;
-    public float criticalChance;
-    public int experience;
-    public int experienceAmount = 10;
-    public int level;
-    public string description;
-    public int gold;
+    public int curHealth { get; private set; }
+    public int maxHealth { get; private set; }
+    public int attack { get; private set; }
+    public int defense { get; private set; }
+    public float criticalChance { get; private set; }
 
     public Character()
     {
@@ -22,23 +17,15 @@ public class Character
         attack = 35;
         defense = 40;
         criticalChance = 25f;
-        experience = 0;
-        level = 1;
-        gold = 0;
     }
 
-    public Character(int curHealth, int maxHealth, int attack, int defense, int experience, int level, int experienceAmount, int gold, float criticalChance, string description)
+    public Character(int curHealth, int maxHealth, int attack, int defense, float criticalChance)
     {
         this.curHealth = curHealth;
         this.maxHealth = maxHealth;
         this.attack = attack;
         this.defense = defense;
         this.criticalChance = criticalChance;
-        this.experience = experience;
-        this.level = level;
-        this.description = description;
-        this.experienceAmount = experienceAmount;
-        this.gold = gold;
     }
 
     public virtual void OnDamage(int damage)

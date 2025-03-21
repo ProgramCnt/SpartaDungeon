@@ -205,19 +205,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 46153885}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 187689700}
-        m_TargetAssemblyTypeName: UIMain, Assembly-CSharp
-        m_MethodName: OnBackButtonClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &46153885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,7 +681,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 418291960}
   - {fileID: 1573673639}
   - {fileID: 1061573315}
   - {fileID: 1975768874}
@@ -716,7 +703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa7f2fb0259814abffb4cde38bf1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonArea: {fileID: 1573673638}
   goldText: {fileID: 1974605159}
   statusButton: {fileID: 418291961}
   inventoryButton: {fileID: 1114277696}
@@ -1706,11 +1692,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1826866855}
-  m_Father: {fileID: 187689699}
+  m_Father: {fileID: 1573673639}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 200}
+  m_AnchoredPosition: {x: -50, y: 200}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &418291961
@@ -1756,19 +1742,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 418291962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 187689700}
-        m_TargetAssemblyTypeName: UIMain, Assembly-CSharp
-        m_MethodName: OnStatusButtonClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &418291962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3285,7 +3259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a50913268b1174690af0964764889e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusButton: {fileID: 418291961}
+  statusButton: {fileID: 0}
 --- !u!1001 &797965851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4259,19 +4233,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1114277697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 187689700}
-        m_TargetAssemblyTypeName: UIMain, Assembly-CSharp
-        m_MethodName: OnInventoryButtonClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1114277697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4926,7 +4888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d6e71708e6abf4a92dce5ce56485de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryButton: {fileID: 1114277696}
 --- !u!1 &1347351354
 GameObject:
   m_ObjectHideFlags: 0
@@ -5574,6 +5535,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1114277695}
+  - {fileID: 418291960}
   - {fileID: 46153883}
   m_Father: {fileID: 187689699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
