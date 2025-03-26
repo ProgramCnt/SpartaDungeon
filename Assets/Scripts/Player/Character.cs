@@ -10,8 +10,6 @@ public class Character
     public int defense;
     public float criticalChance;
     public int experience;
-    public int level;
-    public int gold;
     public List<ItemData> inventory;
     public ItemData curEquipedItem;
 
@@ -26,14 +24,13 @@ public class Character
         inventory = new List<ItemData> ();
     }
 
-    public Character(int curHealth, int maxHealth, int attack, int defense, int gold, float criticalChance, List<ItemData> inventory)
+    public Character(int curHealth, int maxHealth, int attack, int defense, float criticalChance, List<ItemData> inventory)
     {
         this.curHealth = curHealth;
         this.maxHealth = maxHealth;
         this.attack = attack;
         this.defense = defense;
         this.criticalChance = criticalChance;
-        this.gold = gold;
         if (inventory != null)
         {
             this.inventory = inventory;
