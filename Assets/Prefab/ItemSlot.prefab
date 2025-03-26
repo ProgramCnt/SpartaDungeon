@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5177260937079274888}
   - component: {fileID: 7032943955620798089}
   - component: {fileID: 5114414672534901553}
+  - component: {fileID: 8126552289689580581}
   m_Layer: 5
   m_Name: ItemSlot
   m_TagString: Untagged
@@ -121,6 +122,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8126552289689580581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741439364731665850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a559fa9b8a23e2e4d9e3b80c4a1ad9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemImage: {fileID: 4566793870785444402}
+  equipedText: {fileID: 2875067667418330097}
 --- !u!1 &3502702454042653075
 GameObject:
   m_ObjectHideFlags: 0

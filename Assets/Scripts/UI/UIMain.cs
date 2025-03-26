@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class UIMain : MonoBehaviour
@@ -26,12 +27,15 @@ public class UIMain : MonoBehaviour
 
     public void Init()
     {
-
+        HideBackButton();
     }
 
-    public void SetPlayerInfo(Character character)
+    public void SetPlayerInfo(Player player)
     {
-
+        playerInfoUI.SetCharacterName(player.playerName);
+        playerInfoUI.SetDescription(player.playerDescription);
+        playerInfoUI.SetLevelText(player.level);
+        playerInfoUI.SetLevelBar(player.experience, player.experienceAmount);
     }
 
     public void SetGoldText(int goldAmount)

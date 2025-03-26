@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string playerName;
+    public string playerDescription;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int experience = 0;
+    public int level = 1;
+    public int experienceAmount = 10;
 }

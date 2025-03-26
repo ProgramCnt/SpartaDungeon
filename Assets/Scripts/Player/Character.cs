@@ -4,28 +4,35 @@ using UnityEngine;
 
 public class Character
 {
-    public int curHealth { get; private set; }
-    public int maxHealth { get; private set; }
-    public int attack { get; private set; }
-    public int defense { get; private set; }
-    public float criticalChance { get; private set; }
+    public int curHealth;
+    public int maxHealth;
+    public int attack;
+    public int defense;
+    public float criticalChance;
+    public int experience;
+    public int level;
+    public int gold;
+    public List<ItemData> inventory;
+    public ItemData curEquipedItem;
 
     public Character()
     {
-        curHealth = 100;
         maxHealth = 100;
+        curHealth = maxHealth;
         attack = 35;
         defense = 40;
         criticalChance = 25f;
+        gold = 0;
     }
 
-    public Character(int curHealth, int maxHealth, int attack, int defense, float criticalChance)
+    public Character(int curHealth, int maxHealth, int attack, int defense, int gold, float criticalChance)
     {
         this.curHealth = curHealth;
         this.maxHealth = maxHealth;
         this.attack = attack;
         this.defense = defense;
         this.criticalChance = criticalChance;
+        this.gold = gold;
     }
 
     public virtual void OnDamage(int damage)
@@ -36,5 +43,14 @@ public class Character
     public virtual void Heal(int healAmount)
     {
 
+    }
+
+    public virtual void AddItem(ItemData itemData)
+    {
+        inventory.Add(itemData);
+        //if (inventory.Count > )
+        //{
+
+        //}
     }
 }
