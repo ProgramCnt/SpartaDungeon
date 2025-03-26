@@ -4945,6 +4945,10 @@ MonoBehaviour:
   InventoryButton: {fileID: 1114277696}
   slotPrefab: {fileID: 1741439364731665850, guid: bc6182fd5d54ece4d8d342b7103c6857, type: 3}
   itemSlotList: {fileID: 500686710}
+  itemCountText: {fileID: 627212293}
+  addItems:
+  - {fileID: 11400000, guid: 3836955f5f8671944962a6b07dae1189, type: 2}
+  - {fileID: 11400000, guid: 3836955f5f8671944962a6b07dae1189, type: 2}
 --- !u!1 &1347351354
 GameObject:
   m_ObjectHideFlags: 0
@@ -5593,7 +5597,6 @@ RectTransform:
   m_Children:
   - {fileID: 418291960}
   - {fileID: 1114277695}
-  - {fileID: 418291960}
   - {fileID: 46153883}
   m_Father: {fileID: 187689699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

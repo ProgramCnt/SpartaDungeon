@@ -12,15 +12,19 @@ public class UISlot : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI equipedText;
 
+    public ItemData itemData = null;
 
-
-    public void SetItem()
+    public void SetItem(ItemData itemData)
     {
-        
+        this.itemData = itemData;
     }
 
     public void RefreshUI()
     {
-
+        if (itemData != null)
+        {
+            ItemImage.sprite = itemData.ItemImage;
+            ItemImage.color = new Color(1f,1f,1f,1f);
+        }
     }
 }

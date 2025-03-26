@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,8 +15,14 @@ public class UIInventory : MonoBehaviour
 
     [SerializeField]
     private GameObject itemSlotList;
+
+    [SerializeField]
+    private TextMeshProUGUI itemCountText;
     
     private UISlot[] slots;
+    private int itemCount = 0;
+
+    public List<ItemData> addItems; //임시 아이템 추가용 리스트
 
     private void Awake()
     {
@@ -25,13 +32,28 @@ public class UIInventory : MonoBehaviour
     private void Start()
     {
         InventoryButton.onClick.AddListener(UIManager.Instance._main.OnInventoryButtonClick);
-        UpdateInventorySlot();
-        UIManager.Instance.HideInventory();
+        Init();
     }
 
     public void Init()
     {
+        UpdateInventorySlot();
+        UIManager.Instance.HideInventory();
 
+        for (int i = 0; i < addItems.Count; i++)            //임시로 아이템 추가
+        {
+            slots[i].itemData = addItems[i];
+        }
+
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].itemData != null)
+            {
+                itemCount++;
+                slots[i].RefreshUI();
+            }
+        }
+        UpdateItemCountText(itemCount);
     }
 
     public void UpdateInventorySlot()
@@ -44,5 +66,10 @@ public class UIInventory : MonoBehaviour
             }
         }
         slots = itemSlotList.GetComponentsInChildren<UISlot>();
+    }
+
+    public void UpdateItemCountText(int number)
+    {
+        itemCountText.text = number.ToString();
     }
 }

@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemImage: {fileID: 4566793870785444402}
   equipedText: {fileID: 2875067667418330097}
+  itemData: {fileID: 0}
 --- !u!1 &3502702454042653075
 GameObject:
   m_ObjectHideFlags: 0

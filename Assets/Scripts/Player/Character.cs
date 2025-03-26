@@ -23,9 +23,10 @@ public class Character
         defense = 40;
         criticalChance = 25f;
         gold = 0;
+        inventory = new List<ItemData> ();
     }
 
-    public Character(int curHealth, int maxHealth, int attack, int defense, int gold, float criticalChance)
+    public Character(int curHealth, int maxHealth, int attack, int defense, int gold, float criticalChance, List<ItemData> inventory)
     {
         this.curHealth = curHealth;
         this.maxHealth = maxHealth;
@@ -33,6 +34,14 @@ public class Character
         this.defense = defense;
         this.criticalChance = criticalChance;
         this.gold = gold;
+        if (inventory != null)
+        {
+            this.inventory = inventory;
+        }
+        else
+        {
+            this.inventory = new List<ItemData>();
+        }
     }
 
     public virtual void OnDamage(int damage)
@@ -48,9 +57,5 @@ public class Character
     public virtual void AddItem(ItemData itemData)
     {
         inventory.Add(itemData);
-        //if (inventory.Count > )
-        //{
-
-        //}
     }
 }
