@@ -20,7 +20,6 @@ public class Character
         attack = 35;
         defense = 40;
         criticalChance = 25f;
-        gold = 0;
         inventory = new List<ItemData> ();
     }
 
