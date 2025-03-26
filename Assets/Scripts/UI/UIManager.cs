@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
 
     public UIInventory _inventory;
 
+    public Player player;
+
     private void Awake()
     {
         if (_instance == null)
@@ -27,8 +29,8 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        HideInventory();
-        HideStatus();
+        _main.Init();
+        _main.SetPlayerInfo(player);
     }
 
     public void ShowInventory()
